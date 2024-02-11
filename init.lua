@@ -1,6 +1,7 @@
 require("keymaps")
 require("settings")
 
+vim.g.mapleader = " "   -- Пробел будет нашей супер-командой
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -15,6 +16,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Плагины
+-- Плагины будут подгружаться из папки /plugins
 require("lazy").setup("plugins")
 
