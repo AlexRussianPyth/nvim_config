@@ -3,5 +3,6 @@
   "nvim-tree.lua": { "branch": "master", "commit": "8cbb1db8e90b62fc56f379992e622e9f919792ce" },
   "nvim-treesitter": { "branch": "master", "commit": "6444286cbf3a37862feaa7ff86456dd948f5cf8b" },
   "nvim-web-devicons": { "branch": "master", "commit": "7f30f2da3c3641841ceb0e2c150281f624445e8f" },
-  "vim-nightfly-guicolors": { "branch": "master", "commit": "56fe47bd16272d9644fd9946a2596fa2c3905c35" }
+  "vim-nightfly-guicolors": { "branch": "master", "commit": "56fe47bd16272d9644fd9946a2596fa2c3905c35" },
+  "vim-plugin-ruscmd": { "branch": "master", "commit": "e952abbea092e420b128936a0c284fb522612c3a" }
 }
