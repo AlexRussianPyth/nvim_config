@@ -14,3 +14,10 @@ map('', '<right>', ':echoe "Use hjkl, bro"<CR>', {noremap = true, silent = false
 map('n', '<F5>', ':exec &nu==&rnu? "se nu!" : "se rnu!"<CR>', default_opts)
 -- Выходим в нормальный режим через <jk>, чтобы не тянуться
 map('i', 'jk', '<Esc>', {noremap = true})
+map('i', 'ол', '<Esc>', {noremap = true})
+
+-----------------------------------------------------------
+-- ПОИСК
+-----------------------------------------------------------
+-- Выключить подсветку поиска
+map('n', ',<space>', ':nohlsearch<CR>', {noremap = true})

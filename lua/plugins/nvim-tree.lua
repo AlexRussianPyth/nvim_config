@@ -22,8 +22,7 @@ return {
 	})
 
 	-- set keymaps
-	local keymap = vim.keymap
-	keymap.set("n", "<F4>", ":NvimTreeRefresh<CR>:NvimTreeToggle<CR>") -- toggle fire explorer
+	vim.keymap.set("n", "<F4>", ":NvimTreeRefresh<CR>:NvimTreeToggle<CR>") -- toggle file explorer
 
 	end,
 }
