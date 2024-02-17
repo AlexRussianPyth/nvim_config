@@ -11,7 +11,7 @@ return {
 	    sorter = "case_sensitive",
 	  },
 	  view = {
-	    width = 30,
+	    width = 20,
 	  },
 	  renderer = {
 	    group_empty = true,
@@ -22,7 +22,8 @@ return {
 	})
 
 	-- set keymaps
-	vim.keymap.set("n", "<F4>", ":NvimTreeRefresh<CR>:NvimTreeToggle<CR>") -- toggle file explorer
+	vim.keymap.set("n", "<leader>e", ":NvimTreeRefresh<CR>:NvimTreeToggle<CR>") -- toggle file explorer
+	vim.keymap.set("n", "<leader>r", ":NvimTreeFindFile<CR>") -- find opened file in tree
 
 	end,
 }
