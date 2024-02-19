@@ -1,8 +1,6 @@
-require("keymaps")
-require("settings")
+vim.g.mapleader = " " -- Пробел будет нашей супер-командой
 
-vim.g.mapleader = " "   -- Пробел будет нашей супер-командой
-
+-- Download Lazy Package Manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -16,6 +14,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Плагины будут подгружаться из папки /plugins
-require("lazy").setup("plugins")
-
+require("lazy").setup("plugins") -- Плагины будут подгружаться из папки /plugins
+require("keymaps")
+require("settings")

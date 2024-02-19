@@ -9,16 +9,18 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "jedi_language_server"},
+				ensure_installed = { "lua_ls", "pyright" },
 			})
 		end,
 	},
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
-			lspconfig.lua_ls.setup({})
-			lspconfig.jedi_language_server.setup({})
+			lspconfig.lua_ls.setup({ capabilities = capabilities })
+			lspconfig.pyright.setup({ capabilities = capabilities })
+			lspconfig.emmet_language_server.setup({ capabilities = capabilities }) -- djangohtml and others
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {}) -- Покажет документацию по данному слову
 			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {}) -- Переименует что-то
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
