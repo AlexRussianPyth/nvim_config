@@ -9,7 +9,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "pyright" },
+				ensure_installed = { "lua_ls", "pyright", "gopls" },
 			})
 		end,
 	},
@@ -21,6 +21,7 @@ return {
 			lspconfig.lua_ls.setup({ capabilities = capabilities })
 			lspconfig.pyright.setup({ capabilities = capabilities })
 			lspconfig.emmet_language_server.setup({ capabilities = capabilities }) -- djangohtml and others
+			lspconfig.gopls.setup({ capabilities = capabilities })
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {}) -- Покажет документацию по данному слову
 			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {}) -- Переименует что-то
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
